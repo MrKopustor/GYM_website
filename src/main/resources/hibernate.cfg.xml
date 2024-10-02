@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="connection.url">jdbc:postgresql://localhost:5432/GymUpdate</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">1111</property>
+
+
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="show_sql">false</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="format_sql">true</property>
+
+        <mapping class="com.teachmeskills.gym_website.entity.Exercise"/>
+        <mapping class="com.teachmeskills.gym_website.entity.Review"/>
+        <mapping class="com.teachmeskills.gym_website.entity.Role"/>
+        <mapping class="com.teachmeskills.gym_website.entity.SaleSeasonTickets"/>
+        <mapping class="com.teachmeskills.gym_website.entity.Schedule"/>
+        <mapping class="com.teachmeskills.gym_website.entity.Ticket"/>
+        <mapping class="com.teachmeskills.gym_website.entity.Training"/>
+        <mapping class="com.teachmeskills.gym_website.entity.User"/>
+
+    </session-factory>
+</hibernate-configuration>
