@@ -56,29 +56,72 @@
 
             </ul>
 
-            <div class="text-end">
-                <button class="btn btn-outline-light me-2" onclick="location.href='/profi-master-welcome'"
-                        type="button">
-                    ВХОД
-                </button>
-                <button class="btn btn-warning" onclick="location.href='/profi-registration'" type="button">
-                    РЕГИСТРАЦИЯ
-                </button>
 
-            </div>
         </div>
-    </div>
 </header>
 
 <div class="container text-center">
     <div class="row">
         <div class="col-10"><p style="font-weight: bold; color: gray; font-size: 50px; text-align: center">
-            ДАВАЙТЕ ЗАНИМАТЬСЯ СПОРТОМ ВМЕСТЕ!!!! (Быть дырявыми)</p></div>
+            ДАВАЙТЕ ЗАРЕГЕСТРИРУЕМСЯ НА НАШЕМ САЙТЕ</p></div>
         <div class="col-2"></div>
     </div>
 </div>
 
+<c:if test="${userNotNULL}">
+    <p>Такой и-мал уже занят</p>
+</c:if>
 
+<c:if test="${passwordUserWRONG}">
+    <p>Введённые пароли не совпадают</p>
+</c:if>
+
+<div class="container text-center">
+    <form method="post" action="${pageContext.request.contextPath}/main-sing-up" name="saveUser" id="saveUser">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nameUser" name="nameUser" placeholder="Ваше имя" value="${nameUser}"/>
+            <label for="nameUser">Ваше имя</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="surnameUser" name="surnameUser" placeholder="Ваша фамилия" value="${surnameUser}"/>
+            <label for="surnameUser">Ваша фамилия</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="emailUser" name="emailUser" placeholder="Ваш email" value="${emailUser}">
+            <label for="emailUser">Ваша почта</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="phoneUser" name="phoneUser" placeholder="Ваш номер телефона" value="${phoneUser}">
+            <label for="phoneUser">Ваш номер телефона</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="date" class="form-control" id="dateBirthUser" name="dateBirthUser"
+                   placeholder="Уважите Вашу дату рождения" value="${dateBirthUser}">
+            <label for="dateBirthUser">Уважите Вашу дату рождения</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="passwordUser" name="passwordUser"
+                   placeholder="Укажите Ваш пароль" value="${passwordUser}">
+            <label for="passwordUser">Укажите Ваш пароль</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="passwordRepeatUser" name="passwordRepeatUser"
+                   placeholder="Повторите введенный пароль" value="${passwordRepeatUser}">
+            <label for="passwordRepeatUser">Повторите введенный пароль</label>
+        </div>
+
+        <button type="submit" class="btn btn-success" form="saveUser">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
+    </form>
+</div>
+
+<!--имя-->
+<!--фамилия-->
+<!--почта-->
+<!--номер телефона-->
+<!--дата рождения-->
+<!--пароль-->
+<!--повторить пароль-->
+<!--роль-->
 </body>
 
 

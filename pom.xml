@@ -30,54 +30,115 @@
     <java.version>17</java.version>
   </properties>
   <dependencies>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-freemarker</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-mail</artifactId>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash;		<dependency>&ndash;&gt;-->
+<!--    &lt;!&ndash;			<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+<!--    &lt;!&ndash;			<artifactId>spring-boot-starter-security</artifactId>&ndash;&gt;-->
+<!--    &lt;!&ndash;		</dependency>&ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-web</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.postgresql</groupId>-->
+<!--      <artifactId>postgresql</artifactId>-->
+<!--      <scope>runtime</scope>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-test</artifactId>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.security</groupId>-->
+<!--      <artifactId>spring-security-test</artifactId>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.projectlombok</groupId>-->
+<!--      <artifactId>lombok</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-data-rest</artifactId>-->
+<!--    </dependency>-->
+
+
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-security</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.security</groupId>-->
+<!--      <artifactId>spring-security-test</artifactId>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-freemarker</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-mail</artifactId>
-    </dependency>
-    <!--		<dependency>-->
-    <!--			<groupId>org.springframework.boot</groupId>-->
-    <!--			<artifactId>spring-boot-starter-security</artifactId>-->
-    <!--		</dependency>-->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <!--       <dependency> -->
+    <!--           <groupId>org.apache.tomcat.embed</groupId> -->
+    <!--           <artifactId>tomcat-embed-jasper</artifactId> -->
+    <!--           <version>10.1.20</version> -->
+    <!--       </dependency> -->
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+      <scope>10.1.20</scope>
     </dependency>
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+    <!--     <dependency> -->
+    <!--       <groupId>org.springframework.boot</groupId> -->
+    <!--       <artifactId>spring-boot-starter-thymeleaf</artifactId> -->
+    <!--     </dependency> -->
     <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
+      <groupId>org.glassfish.web</groupId>
+      <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+      <version>2.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-tomcat</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-rest</artifactId>
+      <groupId>net.n2oapp.criteria</groupId>
+      <artifactId>criteria-api</artifactId>
+      <version>7.27.15</version>
     </dependency>
-
   </dependencies>
 
   <build>

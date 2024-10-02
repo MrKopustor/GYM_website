@@ -56,58 +56,29 @@
 
             </ul>
 
+            <div class="text-end">
+                <button class="btn btn-outline-light me-2" onclick="location.href='/main-sing-in'"
+                        type="button">
+                    ВХОД
+                </button>
+                <button class="btn btn-warning" onclick="location.href='/main-sing-up'" type="button">
+                    РЕГИСТРАЦИЯ
+                </button>
 
+            </div>
+        </div>
     </div>
 </header>
 
 <div class="container text-center">
     <div class="row">
         <div class="col-10"><p style="font-weight: bold; color: gray; font-size: 50px; text-align: center">
-            ДАВАЙТЕ ЗАРЕГЕСТРИРУЕМСЯ НА НАШЕМ САЙТЕ</p></div>
+            ДАВАЙТЕ ЗАНИМАТЬСЯ СПОРТОМ ВМЕСТЕ!!!! (Быть дырявыми)</p></div>
         <div class="col-2"></div>
     </div>
 </div>
-<div class="container text-center">
-    <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="nameUser" name="nameUser" placeholder="Ваше имя">
-        <label for="nameUser">Ваше имя</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="surnameUser" name="surnameUser" placeholder="Ваша фамилия">
-        <label for="surnameUser">Ваша фамилия</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="emailUser" name="emailUser" placeholder="Ваш email">
-        <label for="emailUser">Ваша почта</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="number" class="form-control" id="phoneUser" name="phoneUser" placeholder="Ваш номер телефона">
-        <label for="phoneUser">Ваш номер телефона</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="date" class="form-control" id="dateBirthUser" name="dateBirthUser" placeholder="Уважите Вашу дату рождения">
-        <label for="dateBirthUser">Уважите Вашу дату рождения</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="password" class="form-control" id="passwordUser" name="passwordUser" placeholder="Укажите Ваш пароль">
-        <label for="passwordUser">Укажите Ваш пароль</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="password" class="form-control" id="passwordRepeatUser" name="passwordRepeatUser" placeholder="Повторите введенный пароль">
-        <label for="passwordRepeatUser">Повторите введенный пароль</label>
-    </div>
 
-    <button type="button" class="btn btn-success">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
-</div>
 
-<!--имя-->
-<!--фамилия-->
-<!--почта-->
-<!--номер телефона-->
-<!--дата рождения-->
-<!--пароль-->
-<!--повторить пароль-->
-<!--роль-->
 </body>
 
 
