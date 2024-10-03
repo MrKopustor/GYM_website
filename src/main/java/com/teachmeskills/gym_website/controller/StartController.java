@@ -2,6 +2,7 @@ package com.teachmeskills.gym_website.controller;
 
 import com.teachmeskills.gym_website.entity.User;
 import com.teachmeskills.gym_website.request.dataBase.request.general.GeneralRequest;
+import jakarta.annotation.security.RolesAllowed;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +26,9 @@ public class StartController {
         return "registration";
     }
 
+
     @GetMapping(path = "/main-sing-in")
+//    @RolesAllowed({"CLIENT", "ADMIN", "TRAINER"})
     private String singIn(Model model) {
         return "authPage";
     }

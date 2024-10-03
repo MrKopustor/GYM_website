@@ -56,9 +56,9 @@
             </ul>
 
             <div class="text-end">
-                <button class="btn btn-outline-light me-2" onclick="location.href='/profi-master-welcome'"
+                <button class="btn btn-outline-light me-2" onclick="location.href='/logout'"
                         type="button">
-                    ВЫХОД
+                    Sing out
                 </button>
             </div>
         </div>

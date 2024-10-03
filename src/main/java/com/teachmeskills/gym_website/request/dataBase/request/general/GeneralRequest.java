@@ -1,5 +1,6 @@
 package com.teachmeskills.gym_website.request.dataBase.request.general;
 
+import com.teachmeskills.gym_website.config.SecurityConfig;
 import com.teachmeskills.gym_website.entity.Role;
 import com.teachmeskills.gym_website.entity.User;
 import com.teachmeskills.gym_website.request.AppCfg;
@@ -7,12 +8,16 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import static com.teachmeskills.gym_website.request.AppCfg.entityManagerFactory;
 
 @Component
 public class GeneralRequest {
+
+
+    private static PasswordEncoder passwordEncoder = SecurityConfig.passwordEncoder();
 
     private static SessionFactory sf = entityManagerFactory();
 
@@ -36,7 +41,7 @@ public class GeneralRequest {
                                 String passwordUser) {
         User user = new User();
         user.setEmail(emailUser);
-        user.setPassword(passwordUser);
+        user.setPassword(passwordEncoder.encode(passwordUser));
         user.setName(nameUser);
         user.setSurname(surnameUser);
         user.setCellPhone(phoneUser);
