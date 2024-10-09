@@ -3,22 +3,22 @@ package com.teachmeskills.gym_website.controller;
 import com.teachmeskills.gym_website.entity.User;
 import com.teachmeskills.gym_website.request.dataBase.request.general.GeneralRequest;
 import jakarta.annotation.security.RolesAllowed;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import static com.teachmeskills.gym_website.request.dataBase.request.general.GeneralRequest.findUserByUsername;
-import static com.teachmeskills.gym_website.request.dataBase.request.general.GeneralRequest.saveUser;
+import static com.teachmeskills.gym_website.request.dataBase.request.general.GeneralRequest.*;
 
 @Controller
 //@RequestMapping(path = "/main")
 public class StartController {
 
-    @GetMapping(path = "/main-welcome")
-    private String welcomeUser(Model model) {
-        return "startPage";
+    @GetMapping(path = "/gymhub.com")
+    private String startPage(Model model) {
+        return "start";
     }
 
     @GetMapping(path = "/main-sing-up")
@@ -26,10 +26,10 @@ public class StartController {
         return "registration";
     }
 
-
     @GetMapping(path = "/main-sing-in")
-//    @RolesAllowed({"CLIENT", "ADMIN", "TRAINER"})
     private String singIn(Model model) {
+        addToModelListRoles(model);
+        model.addAttribute("user", findUserByUsername(SecurityContextHolder.getContext().getAuthentication().getName()));
         return "authPage";
     }
 
@@ -70,7 +70,7 @@ public class StartController {
             return "registration";
         }
         saveUser(nameUser, surnameUser, emailUser, phoneUser, dateBirthUser, passwordUser);
-        return "startPage";
+        return "start";
     }
 
 

@@ -10,6 +10,10 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+import org.springframework.ui.Model;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.teachmeskills.gym_website.request.AppCfg.entityManagerFactory;
 
@@ -32,6 +36,21 @@ public class GeneralRequest {
         }
         return user;
     }
+
+
+    public static void addToModelListRoles(Model model) {
+        List<String> roleList = new ArrayList<>();
+        try (Session session = sf.getCurrentSession()) {
+            session.beginTransaction();
+            Query findRoleList = session.createQuery("Select role FROM Role");
+            roleList = findRoleList.getResultList();
+            session.getTransaction().commit();
+        }
+        System.out.printf(roleList.toString());
+        model.addAttribute("ROLE_STATE", roleList);
+    }
+
+
 
     public static void saveUser(String nameUser,
                                 String surnameUser,

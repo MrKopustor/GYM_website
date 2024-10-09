@@ -50,7 +50,7 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="${pageContext.request.contextPath}/profi-welcome" class="nav-link px-2 text-red"
 
-                       style="color: red; font-weight: bold">МОЯ КАЧАЛОЧКА</a></li>
+                       style="color: #ffb700;font-size :40px; font-weight: bold">GYM</a></li>
                 <!--                       //todo ПОСТАВИТЬ МАППИНГ ТОТ, КОТОРЫЙ НУЖЕН-->
 
 

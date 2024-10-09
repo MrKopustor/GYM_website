@@ -35,9 +35,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                          .requestMatchers("/").hasRole("TRAINER")
                         .requestMatchers("/").hasRole("ADMIN")
-                        .requestMatchers("/").hasRole("CLIENT")
+                        .requestMatchers("/selection-pass","/checkout").hasRole("CLIENT")
                         .requestMatchers("/main-sing-in").authenticated()
-                        .requestMatchers("/main-sing-up","/main-welcome").permitAll()
+                        .requestMatchers("/main-sing-up","/gymhub.com").permitAll()
                         .dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll())
 
                 .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
